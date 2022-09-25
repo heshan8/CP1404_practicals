@@ -8,7 +8,7 @@ menu = """ - (V) get valid number
 
 
 def main():
-    """get """
+    """print user score and stars"""
     print(menu)
     number = int
     choice = input(">").upper()
