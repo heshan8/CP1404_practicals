@@ -18,6 +18,7 @@ while choice != "Q":  # while input is bad (not Q)
         print("invalid choice!")
         print(menu)
         choice = input("").upper()
+
 print("Finished")
 
 
