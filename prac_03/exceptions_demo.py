@@ -6,7 +6,7 @@ when a non integer is entered
 2. When will a ZeroDivisionError occur?
 when 0 is entered as the denominator
 3. Could you change the code to avoid the possibility of a ZeroDivisionError?
-Using a boolean
+Using a
 """
 
 
@@ -14,7 +14,7 @@ def main():
     try:
         numerator = int(input("Enter the numerator: "))
         denominator = int(input("Enter the denominator: "))
-        fraction = safe_div(numerator, denominator)
+        fraction = zero_div(numerator, denominator)
         print(fraction)
     except ValueError:
         print("Numerator and denominator must be valid numbers!")
@@ -23,10 +23,11 @@ def main():
     print("Finished.")
 
 
-def safe_div(numerator, denominator):
+def zero_div(numerator, denominator):
     if denominator == 0:
         return denominator
-    return numerator / denominator
+    else:
+        return numerator / denominator
 
 
 main()
