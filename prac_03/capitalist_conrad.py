@@ -9,18 +9,17 @@ The price should be displayed to the nearest cent (e.g. $33.59, not $33.59182329
 """
 import random
 
-MAX_INCREASE = 0.1  # 10%
+MAX_INCREASE = 0.175  # 17.5%
 MAX_DECREASE = 0.05  # 5%
-MIN_PRICE = 0.01
-MAX_PRICE = 1000.0
+MIN_PRICE = 1.0
+MAX_PRICE = 100.0
 INITIAL_PRICE = 10.0
-
-
+OUTPUT_FILE = "stock_prices.txt"
 price = INITIAL_PRICE
-print(f"Starting price: {INITIAL_PRICE}")
 day = 0
-# while MIN_PRICE <= price <= MAX_PRICE:
 
+out_file = open(OUTPUT_FILE, 'w')
+print(f"Starting price: {INITIAL_PRICE}", file=out_file)
 while price >= MIN_PRICE and price <= MAX_PRICE:  # while MIN_PRICE <= price <= MAX_PRICE:
     price_change = 0
     # generate a random integer of 1 or 2
@@ -35,5 +34,6 @@ while price >= MIN_PRICE and price <= MAX_PRICE:  # while MIN_PRICE <= price <= 
         price_change = random.uniform(-MAX_DECREASE, 0)
     price *= (1 + price_change)
     day += 1
-    print(f"on day {day} price is: ${price:,.2f}")
-    # print("${:,.2f}".format(price))
+    print(f"on day {day} price is: ${price:,.2f}", file=out_file)
+out_file.close()
+# print("${:,.2f}".format(price))
