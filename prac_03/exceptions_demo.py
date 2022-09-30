@@ -6,7 +6,7 @@ when a non integer is entered
 2. When will a ZeroDivisionError occur?
 when 0 is entered as the denominator
 3. Could you change the code to avoid the possibility of a ZeroDivisionError?
-Using a
+Using an If, Else function
 """
 
 
