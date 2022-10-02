@@ -24,6 +24,7 @@ def main():
 
 
 def zero_div(numerator, denominator):
+    """check user input for zero to avoid ZeroDivisionError"""
     if denominator == 0:
         return denominator
     else:
