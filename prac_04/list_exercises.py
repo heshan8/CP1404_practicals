@@ -1,5 +1,6 @@
 """program that outputs information about a list of user entered numbers """
 
+
 def main():
     numbers = []
     number_of_numbers = int(input("How many numbers: "))
@@ -18,7 +19,7 @@ def main():
 
 main()
 
-
+"""Security checker"""
 usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn',
              'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']
 security_checker = input("Enter username: ")
@@ -27,4 +28,3 @@ while security_checker not in usernames:
     print("Access denied!")
     security_checker = input("Enter username: ")
 print("Access Granted")
-
