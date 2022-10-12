@@ -13,15 +13,19 @@ MAX = 45
 
 def main():
     number_of_picks = int(input("How many quick picks? "))
-    random_numbers = []
+    while number_of_picks < 0 or number_of_picks == 0:
+        print("Number must be higher than 0")
+        number_of_picks = int(input("How many quick picks? "))
+
     for i in range(number_of_picks):
+        random_numbers = []
         for j in range(NUMBERS_IN_LINE):
             generate_number = random.randint(MIN, MAX)
             while generate_number in random_numbers:
                 generate_number = random.randint(MIN, MAX)
             random_numbers.append(generate_number)
         random_numbers.sort()
-        print(" ".join(f"{generate_number}" for generate_number in random_numbers))
+        print(" ".join(f"{generate_number:2}" for generate_number in random_numbers))
 
 
 main()
