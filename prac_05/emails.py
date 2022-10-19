@@ -17,6 +17,7 @@ def main():
 
 
 def get_name_from_email(email):
+    """get email from user input and splits it at '@'"""
     parts = email.split('@')[0]
     return parts.title()
 
