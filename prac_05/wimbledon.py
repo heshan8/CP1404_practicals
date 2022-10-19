@@ -10,11 +10,22 @@ CHAMPION = 2
 
 
 def main():
-    data = get_data(FILENAME)
-    print(data)
+    records = get_records(FILENAME)
+    champion_to_count, countries = get_records(records)
+    display_results(champion_to_count, countries)
 
 
-def process_data(records)
+def display_results(champion_to_count, countries):
+    """displays champions and countries"""
+    print("Wimbledon Champions: ")
+    for name, count in champion_to_count.items():
+        print(name, count)
+    print(f"These {len(countries)} have won Wimbledon")
+    print(",".join(country for country in sorted(countries)))
+
+
+def process_records(records):
+    """Process data taken from get_records function"""
     champion_to_count = {}
     countries = set()
     for record in records:
