@@ -6,12 +6,19 @@ def main():
     email = input("Enter email: ")
     while email != "":
         name = get_name_from_email(email)
-
+        check_name = input(f"is your name {name}? (Y/N): ")
+        if check_name.upper() != "Y" and check_name != "":
+            name = input("Enter your name: ")
+        name_to_email[email] = name
+        email = input("Enter email: ")
+    max_length = max(len(name) for name in list(name_to_email))
+    for email, name in name_to_email.items():
+        print(f"{name:{max_length}} - ({email})")
 
 
 def get_name_from_email(email):
     parts = email.split('@')[0]
-    return parts
+    return parts.title()
 
 
 main()
