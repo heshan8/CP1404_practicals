@@ -13,7 +13,7 @@ MAX = 45
 
 def main():
     number_of_picks = int(input("How many quick picks? "))
-    while number_of_picks < 0 or number_of_picks == 0:
+    while number_of_picks <= 0:
         print("Number must be higher than 0")
         number_of_picks = int(input("How many quick picks? "))
 

@@ -16,7 +16,7 @@ print(numbers)
 numbers[0] = "ten"
 print(numbers)
 
-numbers[6] = 1
+numbers[6] = 1 #use -1
 print(numbers)
 
 print(numbers[2:7])
